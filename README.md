@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+$ rails new example
+$ rails g controller Main home
 
-Things you may want to cover:
+#/routes.rb
+	# get 'main/home'
+	# Cuando ingresa a la raiz, muestra la vista main del controlador home
+	root "main#home"
+# add ++
+#/Gemfile
+gem 'devise'
 
-* Ruby version
+$ bundle
+$ rails g devise:install
+$ rails g devise User
+$ rails db:migrate
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# add ++
+# app/controllers/main_controller.rb
+	before_action :authenticate_user!
