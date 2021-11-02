@@ -1,7 +1,7 @@
 # README
 
-$ rails new example
-$ rails g controller Main home
+	$ rails new example
+	$ rails g controller Main home
 
 ## /routes.rb
 	# get 'main/home'
@@ -9,12 +9,12 @@ $ rails g controller Main home
 	root "main#home"
 # add ++
 ## /Gemfile
-gem 'devise'
+	gem 'devise'
 
 $ bundle
-$ rails g devise:install
-$ rails g devise User
-$ rails db:migrate
+	$ rails g devise:install
+	$ rails g devise User
+	$ rails db:migrate
 
 ## add ++
 ## app/controllers/main_controller.rb
